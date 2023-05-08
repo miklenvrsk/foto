@@ -1,0 +1,948 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: TT Firs Neue;
+  src: url("../resources/fonts/TTFirsNeue-Bold.ttf");
+}
+@font-face {
+  font-family: TT Firs Neue Demi;
+  src: url("../resources/fonts/TTFirsNeue-DemiBold.ttf");
+}
+@font-face {
+  font-family: TT Firs Neue Regular;
+  src: url("../resources/fonts/TTFirsNeue-Regular.ttf");
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2, h1, h3, p {
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  background: #202020;
+  padding: 14px 0;
+}
+.header .header__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3.3fr 1fr;
+  width: 1290px;
+  margin: 0 auto;
+}
+.header .header__container .header__logo {
+  margin: 10px 148px auto 5px;
+}
+.header .header__container .header__menu {
+  width: 100%;
+}
+.header .header__container .header__menu .menu__item .item-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  font-size: 16px;
+  transition: color 300ms ease-in-out;
+}
+.header .header__container .header__menu .menu__item .item-link:hover {
+  color: #FF6E30;
+}
+.header .header__container .header__menu .menu__item .item-link:active {
+  color: #CE4307;
+}
+.header .header__container .header__menu .menu__item .item-link:focus-visible {
+  background: #BC572B;
+}
+.header .header__container .header__link-search {
+  display: flex;
+}
+.header .header__container .header__search {
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: -5px;
+}
+.header .header__container .search-input {
+  padding: 0;
+  width: 0;
+  height: 30px;
+  position: absolute;
+  right: 6%;
+  border: none;
+  background: #202020;
+  border-bottom: #E9E9E9 solid 2px;
+  z-index: 99;
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+.header .header__container .search-active {
+  position: relative;
+  display: flex;
+  width: 342px;
+  margin-left: 20px;
+  z-index: 45;
+  opacity: 0;
+}
+.header .header__container .search-pos {
+  position: absolute;
+  right: 0;
+}
+.header .header__container .close-search {
+  position: absolute;
+  height: 18px;
+  right: 0;
+}
+.header .header__container .none {
+  display: none;
+}
+.header .header__container .search-input:focus {
+  outline: none;
+  z-index: 1;
+}
+.header .header__container .search-input::placeholder {
+  color: #E9E9E9;
+  padding-bottom: 0;
+}
+.header .header__container .header__burger {
+  display: none;
+  background: #4A4A4A;
+  width: 100%;
+  cursor: pointer;
+}
+.header .header__container .header__menu-mobile {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #202020;
+  width: 100%;
+  height: 541px;
+  padding: 14px 21px;
+}
+.header .header__container .header__menu-mobile .close {
+  cursor: pointer;
+}
+.header .header__container .header__menu-mobile .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 214px;
+  color: white;
+}
+.header .header__container .header__menu-mobile .mobile-menu .menu__item-mob {
+  margin-bottom: 30px;
+}
+.header .header__container .header__menu-mobile .mobile-menu .menu__item-mob .item-link-mob {
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  transition: color 300ms ease-in-out;
+}
+.header .header__container .header__menu-mobile .mobile-menu .menu__item-mob .item-link-mob:hover {
+  color: #FF6E30;
+}
+.header .header__container .header__menu-mobile .mobile-menu .menu__item-mob .item-link-mob:active {
+  color: #CE4307;
+}
+.header .header__container .header__menu-mobile .mobile-menu .menu__item-mob .item-link-mob:focus-visible {
+  background: #BC572B;
+}
+.header .header__container .header__menu-mobile .tel-link {
+  color: #FF6E30;
+}
+.header .header__container .header__showMenu {
+  transform: translateY(0);
+}
+
+.hero {
+  padding: 41px 0;
+  margin-bottom: -10px;
+}
+.hero .hero__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  max-width: 1270px;
+  margin: 0 auto;
+}
+.hero .hero__container .hero__neon {
+  position: relative;
+  width: 630px;
+  height: 630px;
+  background: url("../img/neon.jpg");
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.hero .hero__container .hero__neon .neon-autor {
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  font-size: 15px;
+  margin-top: 405px;
+  margin-left: 59px;
+  margin-bottom: 5px;
+}
+.hero .hero__container .hero__neon .neon__master {
+  position: absolute;
+  background: #202020;
+  width: 123px;
+  height: 30px;
+  top: 2%;
+  right: 2%;
+  padding-top: 7px;
+  text-align: center;
+  font-family: TT Firs Neue Demi;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+.hero .hero__container .hero__neon .neon-title {
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 104%;
+  color: white;
+  max-width: 427px;
+  margin-left: 58px;
+  margin-bottom: 19px;
+}
+.hero .hero__container .hero__neon .neon-btn {
+  width: 159px;
+  height: 50px;
+  background: #FF6E30;
+  margin-left: 58px;
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 300ms ease-in-out;
+}
+.hero .hero__container .hero__neon .neon-btn:hover {
+  background: #BC572B;
+}
+.hero .hero__container .hero__neon .neon-btn:focus-visible {
+  background: #FF6E30;
+}
+.hero .hero__container .hero__neon .neon-btn:active {
+  background: #CE4307;
+}
+.hero .hero__container .hero__title {
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: #202020;
+  margin: 0 auto 18px;
+}
+.hero .hero__container .hero__girl1 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.hero .hero__container .hero__girl2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.hero .hero__container .hero__girl3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.about-us {
+  background: #202020;
+  padding: 30px 0;
+}
+.about-us .about-us__container {
+  margin: 0 auto;
+  width: 1270px;
+}
+.about-us .about-us__container .about-us__title {
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: #202020;
+  color: white;
+  margin-bottom: 9px;
+}
+.about-us .about-us__container .about-us__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  margin-bottom: 35px;
+}
+.about-us .about-us__container .about-us__desc {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: white;
+  width: 630px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.about-us .about-us__container .about-us__img {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.about-us .about-us__container .about-us__form {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.about-us .about-us__container .title__input {
+  display: block;
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  color: white;
+  margin-bottom: 16px;
+}
+.about-us .about-us__container .about-us__input {
+  width: 470px;
+  height: 50px;
+  background: #4A4A4A;
+  border: none;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+}
+.about-us .about-us__container .about-us__input::placeholder {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #CACACA;
+  padding-left: 23px;
+  transition: color 0.3s ease-in-out;
+}
+.about-us .about-us__container .about-us__input:hover::placeholder {
+  color: #FF6E30;
+}
+.about-us .about-us__container .about-us__input:focus-visible {
+  outline: #FF6E30 solid 1px;
+}
+.about-us .about-us__container .about-us__btn {
+  width: 126px;
+  height: 50px;
+  background: #FF6E30;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  border: none;
+  margin-left: 25px;
+  transition: background 300ms ease-in-out;
+  cursor: pointer;
+}
+.about-us .about-us__container .about-us__btn:hover {
+  background: #BC572B;
+}
+.about-us .about-us__container .about-us__btn:focus-visible {
+  background: #FF6E30;
+}
+.about-us .about-us__container .about-us__btn:active {
+  background: #CE4307;
+}
+
+.works {
+  padding: 75px 0;
+}
+.works .works__container {
+  width: 1270px;
+  margin: 0 auto;
+}
+.works .works__container .works__title {
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: #202020;
+  margin-bottom: 12px;
+}
+.works .works__container .works__img {
+  margin-bottom: 12px;
+}
+.works .works__container .works__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  grid-column-gap: 30px;
+  grid-auto-rows: minmax(300px, auto);
+}
+.works .works__container .works__content .picture-desc {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #202020;
+  margin-bottom: 13px;
+  width: 190px;
+}
+.works .works__container .works__content .picture-desc-bg {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #202020;
+  margin-bottom: 13px;
+  width: 298px;
+}
+.works .works__container .works__content .works__picture1 {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 300px;
+}
+.works .works__container .works__content .works__picture1 .picture-desc-mb {
+  display: none;
+}
+.works .works__container .works__content .works__picture2 {
+  position: relative;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 300px;
+}
+.works .works__container .works__content .works__picture2 .picture-desc-mb {
+  display: none;
+}
+.works .works__container .works__content .works__picture3 {
+  position: relative;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 300px;
+}
+.works .works__container .works__content #picture-desc-bg {
+  display: none;
+}
+.works .works__container .works__content .picture-name {
+  position: absolute;
+  background: #202020;
+  padding: 6px 19px;
+  top: 3%;
+  right: 3%;
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.works .works__container .works__content .picture-name-bg {
+  position: absolute;
+  background: #202020;
+  padding: 6px 14px;
+  top: 2%;
+  right: 10%;
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.works .works__container .works__content .works__semantik {
+  position: relative;
+  width: 630px;
+  height: 300px;
+  background: url("../img/semantik.jpg") no-repeat;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 22px 29px;
+}
+.works .works__container .works__content .works__semantik .semantic-title {
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: #202020;
+  color: white;
+  margin-bottom: 5px;
+  width: 293px;
+}
+.works .works__container .works__content .works__semantik .semantic-desc {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  width: 292px;
+  margin-bottom: 54px;
+}
+.works .works__container .works__content .works__semantik .semantic-btn {
+  background: rgba(0, 0, 0, 0);
+  width: 121px;
+  height: 50px;
+  border: 3px solid #FF6E30;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  transition: background 300ms ease-in-out;
+  cursor: pointer;
+}
+.works .works__container .works__content .works__semantik .semantic-btn:hover {
+  background: #FF6E30;
+}
+.works .works__container .works__content .works__semantik .semantic-btn:focus-visible {
+  background: #BC572B;
+}
+.works .works__container .works__content .works__semantik .semantic-btn:active {
+  background: #CE4307;
+}
+.works .works__container .works__content .works__zabvenie {
+  position: relative;
+  width: 630px;
+  height: 300px;
+  background: url("../img/zabvenie.jpg") no-repeat;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 22px 29px;
+  margin-top: -10px;
+}
+.works .works__container .works__content .works__zabvenie .zabvenie-title {
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: #202020;
+  color: white;
+  margin-bottom: 5px;
+}
+.works .works__container .works__content .works__zabvenie .zabvenie-desc {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  width: 292px;
+  margin-bottom: 101px;
+}
+.works .works__container .works__content .works__zabvenie .zabvenie-btn {
+  background: rgba(0, 0, 0, 0);
+  width: 121px;
+  height: 50px;
+  border: 3px solid #FF6E30;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  transition: background 300ms ease-in-out;
+  cursor: pointer;
+}
+.works .works__container .works__content .works__zabvenie .zabvenie-btn:hover {
+  background: #FF6E30;
+}
+.works .works__container .works__content .works__zabvenie .zabvenie-btn:focus-visible {
+  background: #BC572B;
+}
+.works .works__container .works__content .works__zabvenie .zabvenie-btn:active {
+  background: #CE4307;
+}
+.works .works__container .works__content .works__picture4 {
+  position: relative;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-top: -10px;
+}
+.works .works__container .works__content .works__picture4 .picture-name-bg {
+  top: 2%;
+  right: 2%;
+}
+.works .works__container .works__content .works__picture5 {
+  position: relative;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-top: -10px;
+}
+.works .works__container .works__content .works__picture5 .picture-name-bg {
+  top: 2%;
+  right: 33%;
+}
+.works .works__container .works__content .date {
+  padding: 10px 0;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #999999;
+}
+.works .works__container .works__content .date img {
+  margin-right: 5px;
+  margin-bottom: auto;
+}
+.works .works__container .works__content .date-white {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: white;
+}
+.works .works__container .works__content .date-white img {
+  margin-right: 5px;
+}
+
+.contact {
+  margin-top: -50px;
+}
+.contact .contact__container {
+  width: 1310px;
+  margin: 0 auto;
+}
+.contact .contact__container .contact__title {
+  font-family: TT Firs Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: #202020;
+  margin-bottom: 22px;
+  margin-left: 20px;
+}
+.contact .contact__container .contact__content {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contact__container .contact__content .map {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  background: url("../img/map.jpg") no-repeat;
+  margin-left: 20px;
+}
+.contact .contact__container .contact__content .map .marker {
+  position: absolute;
+  top: 95px;
+  right: 227px;
+}
+.contact .contact__container .contact__content .map .contact-info {
+  position: relative;
+  width: 295px;
+  height: 140px;
+  background: rgba(32, 32, 32, 0.85);
+  padding: 175px 50px 150px 60px;
+}
+.contact .contact__container .contact__content .map .contact-info .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.contact .contact__container .contact__content .map .contact-info .name-company {
+  font-family: "TT Firs Neue Regular", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  color: white;
+  margin-bottom: 5px;
+}
+.contact .contact__container .contact__content .map .contact-info .adress {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #CACACA;
+  margin-bottom: 3px;
+  width: 300px;
+}
+.contact .contact__container .contact__content .map .contact-info .tel-link {
+  color: #FF6E30;
+  font-family: "TT Firs Neue Regular", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+.contact .contact__container .contact__content .map .contact-info .tel-link .tel-icon {
+  height: 18px;
+  margin-right: 5px;
+}
+.contact .contact__container .contact__content .form .form-title {
+  font-family: "TT Firs Neue Regular", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  margin-top: -5px;
+}
+.contact .contact__container .contact__content .form .form-desc {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #999999;
+  margin-bottom: 14px;
+  margin-left: 30px;
+  width: 409px;
+}
+.contact .contact__container .contact__content .form .contact__form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.contact .contact__container .contact__content .form .contact__form .name {
+  margin-bottom: 20px;
+  width: 410px;
+  height: 50px;
+  background: #E9E9E9;
+  border: none;
+}
+.contact .contact__container .contact__content .form .contact__form .name::placeholder {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #999999;
+  padding-left: 23px;
+}
+.contact .contact__container .contact__content .form .contact__form .name:hover::placeholder {
+  color: #FF6E30;
+}
+.contact .contact__container .contact__content .form .contact__form .name:focus-visible {
+  outline: #FF6E30 solid 1px;
+}
+.contact .contact__container .contact__content .form .contact__form .email {
+  margin-bottom: 20px;
+  width: 410px;
+  height: 50px;
+  background: #E9E9E9;
+  border: none;
+}
+.contact .contact__container .contact__content .form .contact__form .email::placeholder {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #999999;
+  padding-left: 23px;
+}
+.contact .contact__container .contact__content .form .contact__form .email:hover::placeholder {
+  color: #FF6E30;
+}
+.contact .contact__container .contact__content .form .contact__form .email:focus-visible {
+  outline: #FF6E30 solid 1px;
+}
+.contact .contact__container .contact__content .form .contact__form .coment {
+  margin-bottom: 20px;
+  width: 410px;
+  height: 140px;
+  background: #E9E9E9;
+  border: none;
+}
+.contact .contact__container .contact__content .form .contact__form .coment::placeholder {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #999999;
+  padding-left: 23px;
+  padding-top: 15px;
+}
+.contact .contact__container .contact__content .form .contact__form .coment:hover::placeholder {
+  color: #FF6E30;
+}
+.contact .contact__container .contact__content .form .contact__form .coment:focus-visible {
+  outline: #FF6E30 solid 1px;
+}
+.contact .contact__container .contact__content .form .contact__form .contact__btn {
+  width: 126px;
+  height: 50px;
+  background: #FF6E30;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  border: none;
+  transition: background 300ms ease-in-out;
+  cursor: pointer;
+}
+.contact .contact__container .contact__content .form .contact__form .contact__btn:hover {
+  background: #BC572B;
+}
+.contact .contact__container .contact__content .form .contact__form .contact__btn:focus-visible {
+  background: #FF6E30;
+}
+.contact .contact__container .contact__content .form .contact__form .contact__btn:active {
+  background: #CE4307;
+}
+
+.footer {
+  margin-top: 70px;
+  background: #202020;
+}
+.footer .footer__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1290px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+}
+.footer .footer__container .footer__logo {
+  margin-left: 7px;
+}
+.footer .footer__container .footer__logo .logo-desc {
+  font-family: TT Firs Neue Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  font-size: 13px;
+  margin-top: 5px;
+}
+.footer .footer__container .footer__desc {
+  width: 361px;
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  margin-left: -130px;
+}
+.footer .footer__container .footer__social .social-desc {
+  font-family: "Roboto", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+}
+.footer .footer__container .footer__social .social-icons {
+  margin-top: 5px;
+}
+.footer .footer__container .footer__social .social-icons .icon-ok {
+  margin-left: 47px;
+  cursor: pointer;
+}
+.footer .footer__container .footer__social .social-icons .icon-ok path {
+  transition: fill 0.3s ease-in-out;
+}
+.footer .footer__container .footer__social .social-icons .icon-ok path:hover {
+  fill: #FF6E30;
+}
+.footer .footer__container .footer__social .social-icons .icon-ok path:focus-visible {
+  fill: #BC572B;
+}
+.footer .footer__container .footer__social .social-icons .icon-ok path:active {
+  fill: #CE4307;
+}
+.footer .footer__container .footer__social .social-icons .icon-vk {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.footer .footer__container .footer__social .social-icons .icon-vk path {
+  transition: fill 0.3s ease-in-out;
+}
+.footer .footer__container .footer__social .social-icons .icon-vk path:hover {
+  fill: #FF6E30;
+}
+.footer .footer__container .footer__social .social-icons .icon-vk path:focus-visible {
+  fill: #BC572B;
+}
+.footer .footer__container .footer__social .social-icons .icon-vk path:active {
+  fill: #CE4307;
+}
+.footer .footer__container .footer__mob-logo {
+  display: none;
+  background: #4A4A4A;
+}
+
+/*# sourceMappingURL=style.css.map */
